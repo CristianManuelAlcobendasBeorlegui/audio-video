@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Àudio i Vídeo</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <audio controls>
@@ -20,7 +22,7 @@
     <!-- L'etiqueta <video> també accepta varies propietats: height, width, autoplay... 
          poster permet establir un fons per quan no el vídeo no s'està reproduint.
     -->
-    <video controls>
+    <video id="videoMetro" controls>
         <!-- podem tenir diversos formats. El repoductor escollirà el primer que reconegui. -->
         <source src="media/metro.mp4" type="video/mp4">
         <source src="media/metro.ogg" type="video/ogg">
@@ -34,5 +36,9 @@
         <track src="media/captions/metro-es.vtt" label="Espanyol" kind="captions" srclang="es">
         El teu navegador no suporta l'element HTML vídeo.
     </video>
+    <div id="capturarFotograma">
+        <input id="btnCapturarFotograma" type="button" value="Capturar fotograma actual">
+        <canvas id="canvasFotogramaVideoActual"></canvas>
+    </div>
 </body>
 </html>
