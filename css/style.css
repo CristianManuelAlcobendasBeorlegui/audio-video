@@ -54,3 +54,37 @@
       transform: translate3d(0,5px,0);
     }
 }
+
+img:hover {
+  animation-name: boxshadowImg;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes boxshadowImg {
+  from {
+    box-shadow: 0 0 0 transparent;
+  }
+
+  to {
+    box-shadow: 0 0 1em blue;
+  }
+}
+
+input[type="range"]:hover {
+  animation-name: boxshadowInputRadio;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes boxshadowInputRadio {
+  from {
+    box-shadow: 0 0 0 transparent;
+  } 
+
+  to {
+    box-shadow: 0 0 1em red;
+  }
+}
